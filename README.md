@@ -3,8 +3,12 @@
 Materiales para la sesión online en español **GitHub Copilot Dev Day 2026**. Este repositorio es independiente de cualquier repositorio de demos o workshop.
 
 La sesión está pensada para aproximadamente **40 minutos**. La idea es entender
-el modelo mental del GitHub Copilot SDK y ejecutar dos ejemplos pequeños, sin
-recorrer el workshop completo.
+el modelo mental del GitHub Copilot SDK, comparar el hello world en cinco
+lenguajes y recorrer progresivamente sus capacidades principales, sin ejecutar
+el workshop completo.
+
+El paso a paso para presentar la sesión está en
+[`SPEAKER-RUNBOOK.md`](SPEAKER-RUNBOOK.md).
 
 ## Recorrido de 40 minutos
 
@@ -139,9 +143,11 @@ repositorio.
 
 ## Slides
 
-El deck reducido está en [`slides/GitHub Copilot SDK - Spanish - 40min-v02.pptx`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v02.pptx).
+El deck reducido está en [`slides/GitHub Copilot SDK - Spanish - 40min-v03.pptx`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v03.pptx).
 Las notas del orador siguen el recorrido de 40 minutos de la tabla anterior.
-La versión [`v01`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v01.pptx) se conserva como referencia.
+Las versiones [`v01`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v01.pptx)
+y [`v02`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v02.pptx)
+se conservan como referencia.
 
 ## Referencias
 
@@ -152,4 +158,3 @@ La versión [`v01`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v01.
 
 Este repositorio contiene material de demostración para una sesión en vivo. Las
 respuestas de los modelos pueden variar y las llamadas pueden consumir cuota.
-
