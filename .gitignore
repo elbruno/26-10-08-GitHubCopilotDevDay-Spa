@@ -1,0 +1,7 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.usersecrets/
+*.user
+*.suo
+.runs/
