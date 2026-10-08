@@ -6,7 +6,7 @@ Guía de 40 minutos para presentar GitHub Copilot SDK en español.
 
 Abrir:
 
-1. PowerPoint con `slides\GitHub Copilot SDK - Spanish - 40min-v03.pptx`.
+1. PowerPoint con `slides\GitHub Copilot SDK - Spanish - 40min-v04.pptx`.
 2. VS Code en `D:\events\26-10-08-GitHubCopilotDevDay-Spa`.
 3. Una terminal PowerShell en el mismo directorio.
 
