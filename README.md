@@ -10,11 +10,13 @@ recorrer el workshop completo.
 
 | Tiempo | Tema |
 | --- | --- |
-| 00-05 | Qué es el Copilot SDK y qué aporta frente a llamar directamente a un modelo. |
-| 05-12 | Hello world en C#: cliente, runtime, sesión y prompt. |
-| 12-22 | Conceptos para construir una aplicación: streaming, system prompt, tools, permisos y MCP. Se muestran en código y ejemplos breves. |
-| 22-32 | BYOK: conectar una sesión del SDK con un modelo de Microsoft Foundry. |
-| 32-40 | Preguntas, recursos y próximos pasos. |
+| 00-04 | Apertura y agenda. |
+| 04-08 | El runtime de Copilot y qué aporta frente a llamar directamente a un modelo. |
+| 08-13 | Demo 1, hello world en C#: cliente, runtime, sesión y prompt. |
+| 13-21 | Qué incluye el harness y disponibilidad en seis lenguajes. |
+| 21-29 | El contrato runtime-aplicación: streaming, system prompt, tools, permisos y MCP. Permisos no equivalen a aislamiento. |
+| 29-34 | Demo 2, BYOK: conectar una sesión del SDK con un modelo de Microsoft Foundry. |
+| 34-40 | Preguntas, recursos y próximos pasos. |
 
 El [workshop oficial de GitHub Copilot SDK](https://github.com/github/copilot-sdk-workshop)
 se menciona como siguiente paso para quien quiera construir una aplicación más
@@ -70,7 +72,9 @@ repositorio.
 
 ## Slides
 
-El deck reducido está en [`slides/GitHub Copilot SDK - Spanish - 40min-v01.pptx`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v01.pptx).
+El deck reducido está en [`slides/GitHub Copilot SDK - Spanish - 40min-v02.pptx`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v02.pptx).
+Las notas del orador siguen el recorrido de 40 minutos de la tabla anterior.
+La versión [`v01`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v01.pptx) se conserva como referencia.
 
 ## Referencias
 
