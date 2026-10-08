@@ -5,3 +5,8 @@
 *.user
 *.suo
 .runs/
+**/node_modules/
+**/target/
+**/.venv/
+**/__pycache__/
+**/*.egg-info/

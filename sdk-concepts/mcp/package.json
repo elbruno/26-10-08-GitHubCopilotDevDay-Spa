@@ -1,0 +1,7 @@
+{
+  "name": "copilot-sdk-concepts-mcp",
+  "private": true,
+  "dependencies": {
+    "wikipedia-mcp": "1.0.3"
+  }
+}

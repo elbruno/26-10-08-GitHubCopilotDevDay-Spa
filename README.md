@@ -13,8 +13,8 @@ recorrer el workshop completo.
 | 00-04 | Apertura y agenda. |
 | 04-08 | El runtime de Copilot y qué aporta frente a llamar directamente a un modelo. |
 | 08-13 | Demo 1, hello world en C#: cliente, runtime, sesión y prompt. |
-| 13-21 | Qué incluye el harness y disponibilidad en seis lenguajes. |
-| 21-29 | El contrato runtime-aplicación: streaming, system prompt, tools, permisos y MCP. Permisos no equivalen a aislamiento. |
+| 13-21 | Qué incluye el harness y disponibilidad en seis lenguajes. Hello world comparado en cinco lenguajes. |
+| 21-29 | El contrato runtime-aplicación, etapa por etapa: streaming, system prompt, tool local, permisos, MCP y skills. Permisos no equivalen a aislamiento. |
 | 29-34 | Demo 2, BYOK: conectar una sesión del SDK con un modelo de Microsoft Foundry. |
 | 34-40 | Preguntas, recursos y próximos pasos. |
 
@@ -41,6 +41,73 @@ El programa muestra el patrón mínimo:
 2. Arrancar el runtime local de Copilot.
 3. Crear una sesión.
 4. Enviar un prompt y esperar la respuesta.
+
+## Hello world en cinco lenguajes
+
+La carpeta [`examples/`](examples/) tiene el mismo patrón mínimo en C#, Python,
+Go, TypeScript y Rust. Sirve para mostrar que el SDK es el mismo contrato en
+todos los lenguajes. El ejemplo de C# es el mismo código que `hello-csharp`.
+
+Preparar dependencias sin llamar al modelo:
+
+```powershell
+.\examples\Run-All.ps1 -SetupOnly
+```
+
+Ejecutar los cinco, uno detrás de otro:
+
+```powershell
+.\examples\Run-All.ps1 -SkipSetup
+```
+
+El detalle de cada lenguaje por separado está en
+[`examples/README.md`](examples/README.md). Son cinco llamadas reales al modelo
+y pueden consumir cuota.
+
+## Paso a paso de las capacidades del SDK
+
+La carpeta [`sdk-concepts/`](sdk-concepts/) enciende **una sola capacidad por
+etapa**, para explicarlas aisladas:
+
+| Etapa | Capacidad |
+| --- | --- |
+| 01 | Streaming de la respuesta. |
+| 02 | System prompt. |
+| 03 | Tool local definida en la aplicación. |
+| 04 | Permisos, con aprobación y rechazo explícitos. |
+| 05 | MCP, servidor de Wikipedia por stdio con lista blanca de tools. |
+| 06 | Skill local en `sdk-concepts/Skills`. |
+| 07 | WorkIQ con validación de salida, opcional. |
+
+Preparar una vez, fuera de cámara:
+
+```powershell
+cd .\sdk-concepts\mcp
+npm ci
+cd ..
+dotnet restore .\CsharpSdkConcepts.csproj --locked-mode
+dotnet build .\CsharpSdkConcepts.csproj --no-restore
+```
+
+Comprobar sin llamar al modelo:
+
+```powershell
+dotnet run --no-build --project .\sdk-concepts\CsharpSdkConcepts.csproj -- --self-test
+dotnet run --no-build --project .\sdk-concepts\CsharpSdkConcepts.csproj -- --preflight
+```
+
+Ejecutar una etapa en vivo:
+
+```powershell
+dotnet run --no-build --project .\sdk-concepts\CsharpSdkConcepts.csproj -- --stage 01 --model gpt-5.4-mini
+```
+
+Cambiar `--stage` por `02`, `03`, `04`, `05` o `06` según la capacidad que toque.
+La etapa `07` necesita el plugin de WorkIQ configurado por variable de entorno y
+no es parte del recorrido fijo.
+
+Si el tiempo aprieta, el mínimo recomendado es `01`, `03` y `04`. La etapa `05`
+es la que mejor explica MCP si queda margen.
 
 ## Demo 2: BYOK con Microsoft Foundry
 
