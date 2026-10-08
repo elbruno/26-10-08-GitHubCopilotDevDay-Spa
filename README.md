@@ -143,13 +143,15 @@ repositorio.
 
 ## Slides
 
-El deck reducido está en [`slides/GitHub Copilot SDK - Spanish - 40min-v04.pptx`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v04.pptx).
-Las notas del orador siguen el recorrido de 40 minutos de la tabla anterior.
+El deck reducido está en [`slides/GitHub Copilot SDK - Spanish - v05.pptx`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%20v05.pptx).
+Las notas del orador siguen el recorrido de la tabla anterior, pero la v05 no
+fija una duración ni un ritmo obligatorio.
 Las versiones [`v01`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v01.pptx)
 [`v02`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v02.pptx) y
 [`v03`](slides/GitHub%20Copilot%20SDK%20-%20Spanish%20-%2040min-v03.pptx) se
-conservan como referencia. La v04 adapta la portada, agenda y cierre al
-template `GitHub Copilot Dev Days Template.pptx`.
+conservan como referencia. La v04 y la v05 adaptan la portada, agenda y cierre
+al template `GitHub Copilot Dev Days Template.pptx`; la v05 elimina las
+referencias de tiempo para permitir un ritmo más rápido.
 
 ## Referencias
 
